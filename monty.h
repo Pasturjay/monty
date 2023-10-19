@@ -59,6 +59,13 @@ typedef struct data
 } data;
 data datax;
 
+/*helpers.c*/
+FILE *openfile(char *filename);
+size_t num_len(int num);
+void verify_number(char *token);
+void free_stack(stack_t *top);
+
+
 /*main.c*/
 void exec(void);
 int main(int argc, char **argv);
@@ -80,11 +87,5 @@ void _pstr(stack_t **top, unsigned int line_number);
 void _rotl(stack_t **top, unsigned int line_number);
 void _rotr(stack_t **top, unsigned int line_number);
 void _mode(stack_t **top, unsigned int line_number);
-
-/*helpers.c*/
-FILE *openfile(char *filename);
-size_t num_len(int num);
-void verify_number(char *token);
-void free_stack(stack_t *top);
 
 #endif
